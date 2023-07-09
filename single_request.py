@@ -1,7 +1,7 @@
 import openai
 
 # API key
-openai.api_key = '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'
+openai.api_key = 'sk-'
 
 
 model_selection = input("What Model would you like to \n") or "gpt-3.5-turbo"
