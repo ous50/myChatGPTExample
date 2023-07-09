@@ -9,6 +9,7 @@ try:
 except ImportError:
     import readline
 
+now = datetime.now()
 
 # Arguments
 import argparse
@@ -67,7 +68,6 @@ if args.noClear==False:
 # Check API usage
 def check_api_usage():
     r = openai.api_requestor.APIRequestor()
-    now = datetime.now()
     resp = r.request("GET", '/usage?date=' + now.strftime('%F'))
     # resp_object = resp[0]
     print("Your API Usage: " + str(resp[0].data["current_usage_usd"]) + " USD.")
